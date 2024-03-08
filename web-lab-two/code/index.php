@@ -79,5 +79,13 @@ $randomArray = [];
 for($i = 0; $i < 10; $i++) $randomArray[$i] = rand();
 print_r($randomArray);
 
+$a = 20;
+$b = 30;
+echo abs($a - $b), "\n";
+$absArray = array(1, 2, -1, -2, 3, -3);
+for($i = 0; $i < sizeof($absArray); $i++) $absArray[$i] = abs($absArray[$i]);
+print_r($absArray);
+echo "\n";
+
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
