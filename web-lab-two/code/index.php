@@ -60,5 +60,15 @@ $sum = 0;
 foreach($arr as $element) $sum += pow($element, 2);
 echo "The array power result is $sum\n";
 
+$root = sqrt(379);
+echo round($root), "\n";
+echo round($root, 1), "\n";
+echo round($root, 2), "\n";
+
+$root = sqrt(587);
+$rootArray = array('floor' => floor($root), 'ceil' => ceil($root));
+print_r($rootArray);
+echo "\n"
+
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
