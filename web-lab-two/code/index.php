@@ -101,10 +101,18 @@ for($i = 0; $i <= sizeof($array); $i++) {
     $sum += $array[$i];
     $k += 1;
     if($sum > 10){
-        echo "Amount of first elements is $k";
+        echo "Amount of first elements is $k\n";
         break;
     }
 }
+
+// Task 7 (14?)
+function printStringReturnNumber() {
+    echo "Your number is: ";
+    return 1;
+}
+$my_num = printStringReturnNumber();
+echo $my_num;
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
