@@ -68,7 +68,10 @@ echo round($root, 2), "\n";
 $root = sqrt(587);
 $rootArray = array('floor' => floor($root), 'ceil' => ceil($root));
 print_r($rootArray);
-echo "\n"
+echo "\n";
 
+$numbersArray = array(4, -2, 5, 19, -130, 0, 10);
+echo "Min is ", min($numbersArray), "\n";
+echo "Max is ", max($numbersArray), "\n";
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
