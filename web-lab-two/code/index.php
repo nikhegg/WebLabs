@@ -33,5 +33,15 @@ echo "Meg spent ", $daysPerLanguage, "d to learn ", $numLanguages, " languages\n
 // Task 4 (12?)
 echo "pow(8,2)=", 8**2, "\n";
 
+// Task 5 (13?)
+$myNum = 213;
+$answer = $myNum;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $myNum;
+echo "The answer is ", $answer, "\n";
+
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
