@@ -52,5 +52,13 @@ else if($a % $b == 0) {
     echo "Делится\n";
 } else echo "Делится с остатком ", $a % $b, "\n";
 
+$st = pow(2, 10);
+echo "$st\n";
+echo "sqrt(245) = ", sqrt(245), "\n";
+$arr = array(4, 2, 5, 19, 13, 0, 10);
+$sum = 0;
+foreach($arr as $element) $sum += pow($element, 2);
+echo "The array power result is $sum\n";
+
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
