@@ -254,5 +254,13 @@ if(sizeof($arr) == 3) {
 }
 else echo "Array has ", sizeof($arr), "elements";
 
+// Task 11 (19?)
+$pyramidSize = 20;
+echo "\n";
+for($i = 1; $i <= $pyramidSize; $i++) {
+    for($j = 1; $j <= $i; $j++) echo 'x';
+    echo "\n";
+}
+
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
