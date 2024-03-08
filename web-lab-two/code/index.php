@@ -142,6 +142,19 @@ function printArray($array, $i = 0){
 }
 printArray($array);
 echo "\n";
+function sumDigits($number) {
+    $sum = 0;
+    while($number>0) {
+        $sum += $number % 10;
+        $number = (int)($number / 10);
+    }
+    if($sum > 9) {
+        return sumDigits($sum);
+    }
+    return $sum;
+}
+$number = 5234899;
+echo "Number digits sum is ", sumDigits($number), "\n";
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
