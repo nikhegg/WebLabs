@@ -11,5 +11,9 @@
     $str = 'ahb acb aeb aeeb adcb axeb';
     ?>
     <div>Example string: <b><?php echo $str;?></b></div>
+    <?php 
+    $regexp = '/a..b/';
+    ?>
+    <div>RegExp: <b><?php echo $regexp?></b></div>
 </body>
 </html>
