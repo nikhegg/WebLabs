@@ -15,5 +15,20 @@
     $regexp = '/a..b/';
     ?>
     <div>RegExp: <b><?php echo $regexp?></b></div>
+
+    <?php
+    $matches = [];
+    $count = preg_match_all($regexp, $str, $matches);
+    ?>
+    <div>Total RegExp matches: <b><?php echo $count?></b></div>
+    <br>
+    <div>
+        Matching strings:<br>
+        <?php 
+        foreach($matches[0] as $match) {
+            echo "<b>$match</b><br>";
+        }
+        ?>
+    </div>
 </body>
 </html>
