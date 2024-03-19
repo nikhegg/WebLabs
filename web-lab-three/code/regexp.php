@@ -38,5 +38,12 @@
     ?>
     <div>Example string: <b><?php echo $numericStr?></b></div>
     <div>RegExp: <b><?php echo $numericRegexp?></b></div>
+    <?php 
+    $putPower = function($matches) {
+        return pow($matches[0], 3);
+    };
+    $result = preg_replace_callback($numericRegexp, $putPower, $numericStr)
+    ?>
+    <div>Result: <b><?php echo $result?></b></div>
 </body>
 </html>
