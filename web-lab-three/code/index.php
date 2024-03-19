@@ -7,6 +7,6 @@
     <title>Web Lab Three</title>
 </head>
 <body>
-    
+    <a class="main-button" href="/regexp.php">Go to RegExp Task</a>
 </body>
 </html>
