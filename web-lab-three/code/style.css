@@ -1,0 +1,12 @@
+body {
+    display: flex;
+}
+.main-button {
+    background: #3794FF;
+    color: white;
+    font-size: 16pt;
+    margin: 15px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 100px;
+}
