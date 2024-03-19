@@ -6,7 +6,7 @@
     <title>RegExp Task</title>
 </head>
 <body>
-    <h1>RegExp</h1>
+    <h1>RegExp Part 1</h1>
     <?php
     $str = 'ahb acb aeb aeeb adcb axeb';
     ?>
@@ -30,5 +30,13 @@
         }
         ?>
     </div>
+    <hr>
+    <h1>RegExp Part 2</h1>
+    <?php
+    $numericStr = "a1b2c3efo4";
+    $numericRegexp = '/[0-9]+/';
+    ?>
+    <div>Example string: <b><?php echo $numericStr?></b></div>
+    <div>RegExp: <b><?php echo $numericRegexp?></b></div>
 </body>
 </html>
