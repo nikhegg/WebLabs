@@ -21,7 +21,7 @@
 
     <div class="shadow-container">
         <h1>Task 2 Form</h1>
-        <form action="profile.php">
+        <form action="register.php">
             <label for="user-surname">Your surname</label>
             <input type="text" name="user-surname" id="user-surname">
             <br>
@@ -33,6 +33,8 @@
             <br>
             <input type="submit" value="Save">
         </form>
+        <br>
+        <a class="main-button" href="/profile.php">Open your profile</a>
     </div>
 </body>
 </html>
