@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(sizeof($_SESSION) == 0) {
+if(false === isset($_SESSION['user-surname'], $_SESSION['user-name'], $_SESSION['user-patronymic'])) {
     header('Location: /forms.php');
     exit();
 }
