@@ -18,5 +18,21 @@
             <input type="submit" value="Count words and symbols">
         </form>
     </div>
+
+    <div class="shadow-container">
+        <h1>Task 2 Form</h1>
+        <form action="profile.php">
+            <label for="user-surname">Your surname</label>
+            <input type="text" name="user-surname" id="user-surname">
+            <br>
+            <label for="user-name">Your name</label>
+            <input type="text" name="user-name" id="user-name">
+            <br>
+            <label for="user-patronymic">Your patronymic</label>
+            <input type="text" name="user-patronymic" id="user-patronymic">
+            <br>
+            <input type="submit" value="Save">
+        </form>
+    </div>
 </body>
 </html>
