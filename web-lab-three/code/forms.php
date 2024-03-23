@@ -57,6 +57,8 @@
             <br>
             <input type="submit" value="Publish data">
         </form>
+        <br>
+        <a class="main-button" href="/employee-profile.php">View employee profile</a>
     </div>
 </body>
 </html>
