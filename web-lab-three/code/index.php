@@ -8,5 +8,6 @@
 </head>
 <body>
     <a class="main-button" href="/regexp.php">Go to RegExp Task</a>
+    <a class="main-button" href="/forms.php">Go to Forms Task</a>
 </body>
 </html>
