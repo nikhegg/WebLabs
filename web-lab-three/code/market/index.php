@@ -18,7 +18,6 @@
             <form action="./publish-product.php" method="post">
                 <label for="category">Select the category</label>
                 <select name="category" id="category" required>
-                    <!-- TODO Place foreach here -->
                     <?php
                         $categories = scandir("./products");
                         foreach($categories as $category) {
@@ -27,7 +26,6 @@
                             }
                         } 
                     ?>
-                    <!-- -->
                 </select>
                 <label for="email">Your contact email</label>
                 <input type="email" name="email" required>
@@ -48,7 +46,6 @@
                     <th>Description</th>
                 </thead>
                 <tbody>
-                    <!-- TODO Place foreach here -->
                     <?php
                     for($i = 2; $i < count($categories); $i++) {
                         $category = $categories[$i];
@@ -66,12 +63,11 @@
                                 echo "<td>$formattedTitle</td>";
                                 echo "<td>$email</td>";
                                 echo "<td>$desc</td>";
-                                echo "<tr>";
+                                echo "</tr>";
                             }
                         }
                     }
                     ?>
-                    <!-- -->
                 </tbody>
             </table>
         </div>
