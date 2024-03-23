@@ -36,5 +36,27 @@
         <br>
         <a class="main-button" href="/profile.php">Open your profile</a>
     </div>
+
+    <div class="shadow-container">
+        <h1>Task 3 Form</h1>
+        <form action="employee-register.php">
+            <label for="employee-name">Name</label>
+            <input type="text" name="name" id="employee-name">
+            <br>
+            <label for="employee-age">Age</label>
+            <input type="number" name="age" id="employee-age">
+            <br>
+            <label for="employee-salary">Salary</label>
+            <input type="number" name="salary" id="employee-salary">
+            <br>
+            <label for="employee-email">Email</label>
+            <input type="email" name="email" id="employee-email">
+            <br>
+            <label for="employee-position">Position</label>
+            <input type="text" name="position" id="employee-position">
+            <br>
+            <input type="submit" value="Publish data">
+        </form>
+    </div>
 </body>
 </html>
