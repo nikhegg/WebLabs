@@ -60,9 +60,10 @@
                                 $title = $products[$k];
                                 $desc = file_get_contents("./products/{$category}/{$email}/{$title}");
                                 $categoryDisplay = ucfirst($category);
+                                $formattedTitle = substr($title, 0, strlen($title) - 4);
                                 echo "<tr>";
                                 echo "<td>$categoryDisplay</td>";
-                                echo "<td>$title</td>";
+                                echo "<td>$formattedTitle</td>";
                                 echo "<td>$email</td>";
                                 echo "<td>$desc</td>";
                                 echo "<tr>";
