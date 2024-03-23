@@ -23,10 +23,10 @@
         <h1>Task 2 Form</h1>
         <form action="register.php">
             <label for="user-surname">Your surname</label>
-            <input type="text" name="user-surname" id="user-surname">
+            <input type="text" name="user-surname" id="user-surname" required>
             <br>
             <label for="user-name">Your name</label>
-            <input type="text" name="user-name" id="user-name">
+            <input type="text" name="user-name" id="user-name" required>
             <br>
             <label for="user-patronymic">Your patronymic</label>
             <input type="text" name="user-patronymic" id="user-patronymic">
@@ -41,19 +41,19 @@
         <h1>Task 3 Form</h1>
         <form action="employee-register.php">
             <label for="employee-name">Name</label>
-            <input type="text" name="name" id="employee-name">
+            <input type="text" name="name" id="employee-name" required>
             <br>
             <label for="employee-age">Age</label>
-            <input type="number" name="age" id="employee-age">
+            <input type="number" name="age" id="employee-age" required>
             <br>
             <label for="employee-salary">Salary</label>
-            <input type="number" name="salary" id="employee-salary">
+            <input type="number" name="salary" id="employee-salary" required>
             <br>
             <label for="employee-email">Email</label>
-            <input type="email" name="email" id="employee-email">
+            <input type="email" name="email" id="employee-email" required>
             <br>
             <label for="employee-position">Position</label>
-            <input type="text" name="position" id="employee-position">
+            <input type="text" name="position" id="employee-position" required>
             <br>
             <input type="submit" value="Publish data">
         </form>
