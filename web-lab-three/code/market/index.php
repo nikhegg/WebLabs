@@ -19,8 +19,14 @@
                 <label for="category">Select the category</label>
                 <select name="category" id="category" required>
                     <!-- TODO Place foreach here -->
-                    <option value="cars">Cars</option>
-                    <option value="other">Other</option>
+                    <?php
+                        $categories = scandir("./products");
+                        foreach($categories as $category) {
+                            if('.' != $category AND '..' != $category) {
+                                echo "<option value=\"$category\">$category</option>";
+                            }
+                        } 
+                    ?>
                     <!-- -->
                 </select>
                 <label for="email">Your contact email</label>
