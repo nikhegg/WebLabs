@@ -49,24 +49,27 @@
                 </thead>
                 <tbody>
                     <!-- TODO Place foreach here -->
-                    <tr>
-                        <td>Cars</td>
-                        <td>Porsche Cayenne 2020</td>
-                        <td>test@webmarket.ru</td>
-                        <td>This was my dream car and now it's high time to sell it!</td>
-                    </tr>
-                    <tr>
-                        <td>Cars</td>
-                        <td>Porsche Cayenne 2020</td>
-                        <td>test@webmarket.ru</td>
-                        <td>This was my dream car and now it's high time to sell it!</td>
-                    </tr>
-                    <tr>
-                        <td>Cars</td>
-                        <td>Porsche Cayenne 2020</td>
-                        <td>test@webmarket.ru</td>
-                        <td>This was my dream car and now it's high time to sell it!</td>
-                    </tr>
+                    <?php
+                    for($i = 2; $i < count($categories); $i++) {
+                        $category = $categories[$i];
+                        $emails = scandir("./products/{$category}");
+                        for($j = 2; $j < count($emails); $j++) {
+                            $email = $emails[$j];
+                            $products = scandir("./products/{$category}/{$email}");
+                            for($k = 2; $k < count($products); $k++) {
+                                $title = $products[$k];
+                                $desc = file_get_contents("./products/{$category}/{$email}/{$title}");
+                                $categoryDisplay = ucfirst($category);
+                                echo "<tr>";
+                                echo "<td>$categoryDisplay</td>";
+                                echo "<td>$title</td>";
+                                echo "<td>$email</td>";
+                                echo "<td>$desc</td>";
+                                echo "<tr>";
+                            }
+                        }
+                    }
+                    ?>
                     <!-- -->
                 </tbody>
             </table>
