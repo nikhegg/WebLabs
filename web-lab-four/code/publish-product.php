@@ -16,5 +16,5 @@ if(true === isset($_POST['email'], $_POST['category'], $_POST['title'], $_POST['
     }
     chmod($fileName, 0777);
 }
-header('Location: /market/index.php');
+header('Location: /index.php');
 exit();
