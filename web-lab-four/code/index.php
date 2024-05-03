@@ -18,14 +18,9 @@
             <form action="./publish-product.php" method="post">
                 <label for="category">Select the category</label>
                 <select name="category" id="category" required>
-                    <?php
-                        $categories = scandir("./products");
-                        foreach($categories as $category) {
-                            if('.' != $category AND '..' != $category) {
-                                echo "<option value=\"$category\">$category</option>";
-                            }
-                        } 
-                    ?>
+                    <option value="cars">cars</option>
+                    <option value="phones">phones</option>
+                    <option value="other">other</option>
                 </select>
                 <label for="email">Your contact email</label>
                 <input type="email" name="email" required>
@@ -47,27 +42,18 @@
                 </thead>
                 <tbody>
                     <?php
-                    for($i = 2; $i < count($categories); $i++) {
-                        $category = $categories[$i];
-                        $emails = scandir("./products/{$category}");
-                        for($j = 2; $j < count($emails); $j++) {
-                            $email = $emails[$j];
-                            $products = scandir("./products/{$category}/{$email}");
-                            for($k = 2; $k < count($products); $k++) {
-                                $title = $products[$k];
-                                $desc = file_get_contents("./products/{$category}/{$email}/{$title}");
-                                $categoryDisplay = ucfirst($category);
-                                $formattedTitle = substr($title, 0, strlen($title) - 4);
-                                echo "<tr>";
-                                echo "<td>$categoryDisplay</td>";
-                                echo "<td>$formattedTitle</td>";
-                                echo "<td>$email</td>";
-                                echo "<td>$desc</td>";
-                                echo "</tr>";
-                            }
-                        }
-                    }
-                    ?>
+                        require('vendor/autoload.php');
+                        $client = new Google_Client();
+                        $client->setApplicationName('WebLab4');
+                        $client->setScopes(['https://www.googleapis.com/auth/spreadsheets']);
+                        $client->setAccessType('offline');
+                        $client->setAuthConfig('credentials.json');
+                        
+                        $service = new Google_Service_Sheets($client);
+                        $spreadsheetId = "1bKXPauAFhzRgPlBbTjeXsAt1RMr5CbobKJfHi4Vtc-g";
+                        $listName = "List1";
+
+                        ?>
                 </tbody>
             </table>
         </div>
