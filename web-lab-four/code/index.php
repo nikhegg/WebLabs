@@ -53,6 +53,14 @@
                         $spreadsheetId = "1bKXPauAFhzRgPlBbTjeXsAt1RMr5CbobKJfHi4Vtc-g";
                         $listName = "List1";
 
+                        $rows = $service->spreadsheets_values->get($spreadsheetId, $listName)->getValues();
+                        foreach($rows as $row) {
+                            echo "<tr>";
+                            foreach($row as $cell) {
+                                echo "<td>$cell</td>";
+                            }
+                            echo "</tr>";
+                        }
                         ?>
                 </tbody>
             </table>
