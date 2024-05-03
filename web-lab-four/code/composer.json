@@ -1,0 +1,9 @@
+{
+    "name": "nick/code",
+    "autoload": {
+        "psr-4": {
+            "Nick\\Code\\": "src/"
+        }
+    },
+    "require": {}
+}
