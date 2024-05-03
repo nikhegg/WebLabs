@@ -5,5 +5,7 @@
             "Nick\\Code\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "google/apiclient": "^2.16"
+    }
 }
