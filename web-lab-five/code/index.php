@@ -42,14 +42,20 @@
                 </thead>
                 <tbody>
                     <?php
-
-                        foreach($rows as $row) {
+                        $mysqli = new mysqli('db', 'root', 'helloworld', 'web');
+                        if(mysqli_connect_errno()) {
+                            exit();
+                        }
+                        $adList = $mysqli->query('SELECT * FROM ad ORDER BY created DESC');
+                        while($row = $adList->fetch_assoc()) {
                             echo "<tr>";
-                            foreach($row as $cell) {
-                                echo "<td>$cell</td>";
+                            foreach(['category', 'title', 'email', 'description'] as $field) {
+                                echo '<td>', $row[$field], "</td>";
                             }
                             echo "</tr>";
                         }
+                        $adList->close();
+                        $mysqli->close();
                         ?>
                 </tbody>
             </table>
